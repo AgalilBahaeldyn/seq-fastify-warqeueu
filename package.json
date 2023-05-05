@@ -1,0 +1,25 @@
+{
+  "name": "wat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "fastify": "^4.17.0",
+    "mysql2": "^3.2.4",
+    "nodemon": "^2.0.22",
+    "sequelize": "^6.31.1"
+  }
+}
