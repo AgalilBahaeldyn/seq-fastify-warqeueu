@@ -28,12 +28,14 @@ export const ServiceuserCheckTravel = async (req: ServiceuserCreateRequest) => {
 
 	let datenow:Date=new Date
 	datenow=new Date(datenow.getFullYear(), datenow.getMonth(), datenow.getDate());
-
+	
+	//ค่าที่ทำการคิวรี่มาจาก service 
 	let service_datetext: String = JSON.stringify(queryresult.service_date);
 
 	let service_date: Date = new Date(service_datetext);
 	service_date = new Date(service_date.getFullYear(), service_date.getMonth(), service_date.getDate());
 
+	// เช็คว่าอยู่ในช่วง5วันไหม
 	const diffTime = Math.abs(service_date.getTime() - datenow.getTime());
 	const diffDays: number = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 	console.log(`There are ${diffDays} days between ${datenow} and ${service_date}`);
